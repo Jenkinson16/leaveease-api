@@ -186,6 +186,12 @@ Deploy as a static site on Vercel, Netlify, or Render Static Sites. Build with `
 ### Admin Dashboard - Approve/Reject
 ![Admin Dashboard](screenshots/admin-dashboard.png)
 
+## Related Repository
+
+The React frontend for this project is maintained in a separate repository:
+
+- **Frontend**: [Jenkinson16/leaveease-frontend](https://github.com/Jenkinson16/leaveease-frontend)
+
 ## License
 
 This project is licensed under the MIT License.
