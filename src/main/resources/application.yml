@@ -66,4 +66,5 @@ spring:
 
 logging:
   level:
-    org.springframework.security: ${SECURITY_LOG_LEVEL:WARN}
+    '[org.springframework.security]': ${SECURITY_LOG_LEVEL:DEBUG}
+    '[org.springframework.web]': ${WEB_LOG_LEVEL:DEBUG}
