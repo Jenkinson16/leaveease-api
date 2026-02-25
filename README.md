@@ -1,5 +1,16 @@
 # LeaveEase - Employee Leave Management System
 
+## Live URLs
+
+| Resource | URL |
+|----------|-----|
+| Backend API (Swagger UI) | [https://leaveease-api.onrender.com/swagger-ui/index.html](https://leaveease-api.onrender.com/swagger-ui/index.html) |
+| Frontend Dashboard | [https://leaveease-frontend.vercel.app](https://leaveease-frontend.vercel.app) |
+
+> **Note:** The backend is deployed on Render's free tier. The service may take 30-60 seconds to respond on the first request after a period of inactivity.
+
+---
+
 A full-stack leave management system built with Spring Boot 4.0 and React. Employees can submit leave requests and track their status, while administrators can review, approve, or reject requests through a dedicated dashboard. The application uses JWT-based authentication, role-based access control, and a responsive Material UI frontend built on the Berry admin template.
 
 ## Features
@@ -148,26 +159,30 @@ All 12 tests pass.
 
 ## Deployment
 
-### Backend
+The application is deployed and accessible at the URLs listed at the top of this document.
 
-Deploy as a containerized Spring Boot application on Render, Railway, or any platform that supports Docker or Java. Set the `prod` profile and configure the following environment variables:
+### Backend (Render)
+
+The backend is deployed as a Docker container on [Render](https://render.com) with a PostgreSQL database. The `prod` Spring profile is activated in the Dockerfile. Required environment variables:
 
 | Variable | Description |
 |----------|-------------|
 | `SPRING_PROFILES_ACTIVE` | Set to `prod` |
-| `DB_URL` | PostgreSQL JDBC connection URL |
-| `DB_USER` | Database username |
-| `DB_PASS` | Database password |
-| `APP_JWT_SECRET` | Base64-encoded secret key for JWT signing |
+| `SPRING_DATASOURCE_URL` | PostgreSQL JDBC connection URL (`jdbc:postgresql://host:5432/dbname`) |
+| `SPRING_DATASOURCE_USERNAME` | Database username |
+| `SPRING_DATASOURCE_PASSWORD` | Database password |
+| `APP_JWT_SECRET` | Base64-encoded secret key for JWT signing (minimum 256 bits) |
 | `APP_JWT_EXPIRATION_MS` | Token expiration in milliseconds (e.g. 86400000 for 24 hours) |
 
-### Frontend
+The server port is automatically assigned by Render via the `PORT` environment variable.
 
-Deploy as a static site on Vercel, Netlify, or Render Static Sites. Build with `npm run build` from the `frontend/vite` directory. Configure the following environment variable:
+### Frontend (Vercel)
+
+The frontend is deployed on [Vercel](https://vercel.com) as a static site, built from the `frontend/vite` directory. Required environment variables:
 
 | Variable | Description |
 |----------|-------------|
-| `VITE_API_BASE_URL` | Backend API base URL (e.g. `https://your-api.onrender.com/api`) |
+| `VITE_API_BASE_URL` | Backend API base URL (e.g. `https://leaveease-api.onrender.com/api`) |
 | `VITE_APP_BASE_NAME` | Base path for the app (use `/` for root deployment) |
 
 ## Screenshots
