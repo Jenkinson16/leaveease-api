@@ -11,7 +11,7 @@ spring:
         '[format_sql]': true
 
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 app:
   jwt:
@@ -66,7 +66,5 @@ spring:
 
 logging:
   level:
-    '[org.springframework.security]': ${SECURITY_LOG_LEVEL:TRACE}
-    '[org.springframework.security.web]': ${SECURITY_WEB_LOG_LEVEL:TRACE}
-    '[org.springframework.security.authentication]': ${SECURITY_AUTH_LOG_LEVEL:TRACE}
+    '[org.springframework.security]': ${SECURITY_LOG_LEVEL:DEBUG}
     '[org.springframework.web]': ${WEB_LOG_LEVEL:DEBUG}
