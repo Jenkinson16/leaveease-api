@@ -66,5 +66,7 @@ spring:
 
 logging:
   level:
-    '[org.springframework.security]': ${SECURITY_LOG_LEVEL:DEBUG}
+    '[org.springframework.security]': ${SECURITY_LOG_LEVEL:TRACE}
+    '[org.springframework.security.web]': ${SECURITY_WEB_LOG_LEVEL:TRACE}
+    '[org.springframework.security.authentication]': ${SECURITY_AUTH_LOG_LEVEL:TRACE}
     '[org.springframework.web]': ${WEB_LOG_LEVEL:DEBUG}
