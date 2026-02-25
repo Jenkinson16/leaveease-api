@@ -187,19 +187,17 @@ The frontend is deployed on [Vercel](https://vercel.com) as a static site, built
 
 ## Screenshots
 
-<!-- Replace the placeholder paths below with actual screenshot URLs or relative paths -->
-
 ### Login Page
-![Login Page](screenshots/login.png)
+![Login Page](https://raw.githubusercontent.com/Jenkinson16/leaveease-api/main/screenshots/login.png)
 
 ### Registration Page
-![Registration Page](screenshots/register.png)
+![Registration Page](https://raw.githubusercontent.com/Jenkinson16/leaveease-api/main/screenshots/register.png)
 
 ### Employee Dashboard
-![Employee Dashboard](screenshots/employee-dashboard.png)
+![Employee Dashboard](https://raw.githubusercontent.com/Jenkinson16/leaveease-api/main/screenshots/employee-dashboard.png)
 
 ### Admin Dashboard - Approve/Reject
-![Admin Dashboard](screenshots/admin-dashboard.png)
+![Admin Dashboard](https://raw.githubusercontent.com/Jenkinson16/leaveease-api/main/screenshots/admin-dashboard.png)
 
 ## Related Repository
 
